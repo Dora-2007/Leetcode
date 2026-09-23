@@ -5,11 +5,12 @@ class MyLinkedList {
     public class Node{
         int val;
         Node next;
-        
+        Node prev;
         
         Node(int val){
             this.val = val;
             next=null;
+            prev=null;
         }
     }
     public MyLinkedList() {
@@ -36,8 +37,11 @@ class MyLinkedList {
             head = add;
             tail=add;
         } else {
+
             add.next = head;
+            head.prev=add;
             head = add;
+
         }
         n++;   
     }
@@ -49,6 +53,7 @@ class MyLinkedList {
             tail=add;
         }else{
             tail.next=add;
+            add.prev=tail;
             tail=add;
         }
         n++;
