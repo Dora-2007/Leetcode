@@ -4,7 +4,7 @@ class MyCircularDeque {
 
     public MyCircularDeque(int k) {
         arr = new int[k];
-        this.cap = k;
+        cap = k;
         front = -1;
         rear = -1;
         size = 0;
